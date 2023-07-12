@@ -33,7 +33,7 @@ pipeline {
         stage('docker'){
             steps {
                 sh 'docker build -t image .'
-                sh 'docker run -d --name c1 image'
+                sh 'docker run -d --name mani1 image'
             }
         }
     }
