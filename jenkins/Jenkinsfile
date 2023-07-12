@@ -30,5 +30,11 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+        stage('docker'){
+            steps {
+                sh 'docker build -t image .'
+                sh 'docker run -d --name c1 image'
+            }
+        }
     }
 }
