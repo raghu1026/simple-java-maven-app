@@ -34,7 +34,6 @@ pipeline {
             steps {
                 sh 'docker build -t image .'
                 sh 'docker run -d --name c${BUILD_NUMBER} image'
-                sh 'docker run -rm '
             }
         }
     }
