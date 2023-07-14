@@ -33,7 +33,7 @@ pipeline {
         stage('docker'){
             steps {
                 sh 'docker build -t image .'
-                sh 'docker run -d --name c${BUILD_NUMBER} -p 8081:80 image'
+                sh 'docker run -d --name c${BUILD_NUMBER} -p 9081:80 image'
             }
         }
     }
